@@ -12,3 +12,21 @@ p08.bin:
 c08.bin:
 
     3df8 fe3d 6e3a 12ae 726f a45b b1c7 8dda
+
+## Riešenie
+
+kompilácia `recover`:
+
+    g++ recover.cpp -o recover -O2 -fopenmp -march=native
+
+`./recover hw1-data/p08.bin hw1-data/c08.bin`:
+
+    plaintext       : 2bfe61acc2cd546ff6cfb7e4b0c1094c
+    ciphertext      : 3df8fe3d6e3a12ae726fa45bb1c78dda
+
+    recovered key   : ff76324e57a4527b32ef4958f103bb25
+    ciphertext check: 3df8fe3d6e3a12ae726fa45bb1c78dda (OK)
+
+kľúč:
+
+    ff76 324e 57a4 527b 32ef 4958 f103 bb25
